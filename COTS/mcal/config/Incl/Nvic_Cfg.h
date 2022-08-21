@@ -4,7 +4,7 @@
  *         File:  Nvic_Cfg.H
  *       Module:  -
  *
- *  Description:  <Write File DESCRIPTION here>     
+ *  Description:  configuration for the interrupt module    
  *  
  *********************************************************************************************************************/
 #ifndef Nvic_cfg_h
@@ -18,13 +18,13 @@
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
-#define PRIGROUP 0xE000ED0C
+#define PRIGROUP  0xE000ED0C
 #define int_base1 0xE000E100
 #define int_base2 0xE000E104
 #define int_base3 0xE000E108
 #define int_base4 0xE000E10C
 #define int_base5 0xE000E110
-#define PRI0			0xE000E400
+#define PRI0	  0xE000E400
 
 
 /**********************************************************************************************************************

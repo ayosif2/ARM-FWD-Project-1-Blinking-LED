@@ -1,8 +1,8 @@
 /**********************************************************************************************************************
  *  FILE DESCRIPTION
  *  -----------------------------------------------------------------------------------------------------------------*/
-/**        \file  Port_Lcfg.c
- *        \brief  the configuration struct for all the PORTs
+/**        \file  Timer_Lcfg.c
+ *        \brief  the configuration struct for the systick timer
  *
  *      \details  
  *
@@ -15,5 +15,5 @@
 	const volatile Timer_CFG_Type Timer_Config = Active;  //time in ms for the initiation of the timer
 
 /**********************************************************************************************************************
- *  END OF FILE: Port_Lcfg.c
+ *  END OF FILE: Timer_Lcfg.c
  *********************************************************************************************************************/

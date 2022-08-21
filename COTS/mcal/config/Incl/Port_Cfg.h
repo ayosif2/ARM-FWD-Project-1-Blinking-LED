@@ -4,7 +4,7 @@
  *         File:  Port_Cfg.H
  *       Module:  -
  *
- *  Description:  <Write File DESCRIPTION here>     
+ *  Description:  configuration for the GPIO ports    
  *  
  *********************************************************************************************************************/
 #ifndef Port_cfg

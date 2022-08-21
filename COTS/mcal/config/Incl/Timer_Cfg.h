@@ -4,7 +4,7 @@
  *         File:  Timer_Cfg.H
  *       Module:  -
  *
- *  Description:  <Write File DESCRIPTION here>     
+ *  Description:  configuration for the Systick timer    
  *  
  *********************************************************************************************************************/
 #ifndef Timer_cfg

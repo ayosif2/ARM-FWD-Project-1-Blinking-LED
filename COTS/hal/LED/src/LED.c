@@ -46,15 +46,13 @@
 
 
 /******************************************************************************
-* \Syntax          : void LED_Blink(int time_on,Time_off,Dio_port Port,int Pin_Number)        
-* \Description     : it blinks the Led                                    
+* \Syntax          : void LED_Blink_Handler(int time_on,Time_off,Dio_port Port,int Pin_Number)        
+* \Description     : a function which is used to be called back into the the systick handler to allow blinking without halting the system                                   
 *                                                                             
-* \Sync\Async      : Synchronous                                               
-* \Reentrancy      : Non Reentrant                                             
+*                                            
 * \Parameters (in) : parameterName   Parameter Describtion                     
 * \Parameters (out): None                                                      
-* \Return value:   : Std_ReturnType  E_OK
-*                                    E_NOT_OK                                  
+* \Return value:   : None                                 
 *******************************************************************************/
 
 	void LED_Blink_Handler(){
@@ -84,6 +82,14 @@
 			return;
 		}		
 	}
+/******************************************************************************
+* \Syntax          : void LED_Blink(int time_on,Time_off,Dio_port Port,int Pin_Number)        
+* \Description     : it blinks the led perminantly and can only be stopped with timer stop function it doesn't halt the system               
+*                                                                                                                        
+* \Parameters (in) : on time and off time
+* \Parameters (out): None                                                      
+* \Return value:   : None                                
+*******************************************************************************/
 void LED_Blink(int time_on_f,int Time_off_f){
 		time_on=time_on_f*2-1;
 		Time_off=Time_off_f*2;
@@ -95,7 +101,14 @@ void LED_Blink(int time_on_f,int Time_off_f){
 		Handler_PTR =LED_Blink_Handler;
 		systick_Start(1);		
 }
-
+/******************************************************************************
+* \Syntax          : void LED_Blink_delay(int time_on,Time_off,Dio_port Port,int Pin_Number)        
+* \Description     : it blinks the led once on and off nothing more it halts the system               
+*                                                                                                                        
+* \Parameters (in) : on time and off time
+* \Parameters (out): None                                                      
+* \Return value:   : None                                
+*******************************************************************************/
 void LED_Blink_delay(int time_on_n,int Time_off_n){
 	while(1){
 	Dio_WriteChannel(LED_Config.port , LED_Config.PinNumber,HIGH);
