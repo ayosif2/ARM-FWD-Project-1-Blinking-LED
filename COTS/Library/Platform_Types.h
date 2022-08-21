@@ -6,7 +6,7 @@
  *       Module:  it has the definitions of the platform types used in the system
  *
  *  Description:  <Write File DESCRIPTION here>     
- *  
+ *  */
 #ifndef PLATFORM_TYPES_H
 #define PLATFORM_TYPES_H
 /**********************************************************************************************************************
